@@ -4,7 +4,7 @@
 Créer et/ou modifier des fichiers de contraintes d'architecture NoC pour le logiciel
 Xilinx Vivado. Ces fichiers de contraintes contiennent l'emplacement de
 routeurs (blocs) correspondant à une certaine topologie, que l'on veut modifier.
-Ce programme a été créé pour le Laboratoire Hubert Curien (CNRS).
+Ce programme a été créé pour le **Laboratoire Hubert Curien (CNRS)**.
 
 ![main menu](https://user-images.githubusercontent.com/17772801/52050556-30a1ce80-2551-11e9-86b3-0df601561969.png)
 
