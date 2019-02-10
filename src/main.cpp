@@ -42,7 +42,7 @@ int main() {
      * ---------------------------------------------------------------
      */
     //Please past the path's file ;"/Users/cedricgormond/Desktop/topologyGUI/fichier_contrainte_2D.txt"
-    string file_path = "fichier_contrainte_2D.txt"; //FULL PATH
+    string file_path = "io/fichier_contrainte_2D.txt"; //FULL PATH
 
     ifstream file(file_path.c_str(), ios::in);
     string input_filename = getFilename(file_path); // get the input file name WITHOUT extension
@@ -198,7 +198,7 @@ int main() {
          *  Begin main window
          */
         ImGui::Begin("Settings",p_open,ImGuiWindowFlags_NoMove | ImGuiWindowFlags_NoResize | ImGuiWindowFlags_NoCollapse | ImGuiWindowFlags_NoTitleBar);
-        ImGui::Text("Current file : %s", &file_path[0]);
+        ImGui::Text("Current file : %s", &input_filename[0]);
 
         /*
          *  Help section

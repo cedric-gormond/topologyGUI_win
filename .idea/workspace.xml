@@ -15,7 +15,17 @@
     </configurations>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b121655d-4426-4f66-af0d-fd001afd7405" name="Default Changelist" comment="" />
+    <list default="true" id="b121655d-4426-4f66-af0d-fd001afd7405" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/topologyGUI.dir/CXX.includecache" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/topologyGUI.dir/CXX.includecache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/topologyGUI.dir/objects.a" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/topologyGUI.dir/objects.a" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/topologyGUI.dir/src/main.cpp.obj" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/topologyGUI.dir/src/main.cpp.obj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/fichier_contrainte_2D.txt" beforeDir="false" afterPath="$PROJECT_DIR$/io/fichier_contrainte_2D.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/fichier_contrainte_3D.txt" beforeDir="false" afterPath="$PROJECT_DIR$/io/fichier_contrainte_3D.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/file_tools.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/src/file_tools.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/topologyGUI.exe" beforeDir="false" afterPath="$PROJECT_DIR$/topologyGUI.exe" afterDir="false" />
+    </list>
     <ignored path="$PROJECT_DIR$/cmake-build-debug/" />
     <ignored path="$PROJECT_DIR$/cmake-build-release/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -96,35 +106,39 @@
       <usages-collector id="statistics.file.extensions.open">
         <counts>
           <entry key="cmake" value="9" />
-          <entry key="cpp" value="1" />
+          <entry key="cpp" value="2" />
+          <entry key="h" value="1" />
           <entry key="txt" value="1" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
           <entry key="CMakeLists.txt" value="10" />
-          <entry key="ObjectiveC" value="1" />
+          <entry key="ObjectiveC" value="3" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="txt" value="79" />
+          <entry key="cpp" value="17" />
+          <entry key="txt" value="211" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="CMakeLists.txt" value="79" />
+          <entry key="CMakeLists.txt" value="195" />
+          <entry key="ObjectiveC" value="17" />
+          <entry key="PLAIN_TEXT" value="16" />
         </counts>
       </usages-collector>
     </session>
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/CMakeLists.txt">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="493">
-              <caret line="53" column="66" selection-start-line="53" selection-start-column="66" selection-end-line="53" selection-end-column="66" />
+            <state relative-caret-position="731">
+              <caret line="43" column="25" selection-start-line="43" selection-start-column="25" selection-end-line="43" selection-end-column="25" />
             </state>
           </provider>
         </entry>
@@ -132,11 +146,29 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main.cpp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="151">
-              <caret line="138" column="7" selection-start-line="138" selection-start-column="7" selection-end-line="138" selection-end-column="7" />
+            <state relative-caret-position="153">
+              <caret line="200" column="38" selection-start-line="200" selection-start-column="38" selection-end-line="200" selection-end-column="38" />
               <folding>
                 <element signature="e#355#373#0" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/file_tools.cpp">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="204">
+              <caret line="12" column="43" selection-start-line="12" selection-start-column="43" selection-end-line="12" selection-end-column="43" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/imgui/imgui.h">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="190">
+              <caret line="1204" selection-start-line="1204" selection-end-line="1204" />
             </state>
           </provider>
         </entry>
@@ -262,12 +294,13 @@
         <option value="$PROJECT_DIR$/src/surface.cpp" />
         <option value="$PROJECT_DIR$/src/topology.cpp" />
         <option value="$PROJECT_DIR$/src/topology.hpp" />
-        <option value="$PROJECT_DIR$/src/main.cpp" />
         <option value="$PROJECT_DIR$/src/get_from_ctr.hpp" />
         <option value="$PROJECT_DIR$/src/gen_tools.h" />
         <option value="$PROJECT_DIR$/src/ctr.hpp" />
         <option value="$PROJECT_DIR$/src/surface.h" />
         <option value="$PROJECT_DIR$/CMakeLists.txt" />
+        <option value="$PROJECT_DIR$/src/main.cpp" />
+        <option value="$PROJECT_DIR$/src/file_tools.cpp" />
       </list>
     </option>
   </component>
@@ -296,16 +329,6 @@
               <item name="topologyGUI" type="b2602c69:ProjectViewProjectNode" />
               <item name="topologyGUI" type="462c0819:PsiDirectoryNode" />
             </path>
-            <path>
-              <item name="topologyGUI" type="b2602c69:ProjectViewProjectNode" />
-              <item name="topologyGUI" type="462c0819:PsiDirectoryNode" />
-              <item name="cmake_modules" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="topologyGUI" type="b2602c69:ProjectViewProjectNode" />
-              <item name="topologyGUI" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-            </path>
           </expand>
           <select />
         </subPane>
@@ -323,11 +346,11 @@
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\Developpement\topologyGUI\io" />
+      <recent name="D:\Developpement\topologyGUI\input" />
       <recent name="$PROJECT_DIR$/misc/fonts" />
       <recent name="$PROJECT_DIR$" />
       <recent name="$PROJECT_DIR$/imgui-sfml" />
-      <recent name="$PROJECT_DIR$/font" />
-      <recent name="$PROJECT_DIR$/imgui" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -409,7 +432,7 @@
       <workItem from="1549801525847" duration="31000" />
       <workItem from="1549801602331" duration="948000" />
       <workItem from="1549811071150" duration="4401000" />
-      <workItem from="1549817242760" duration="1121000" />
+      <workItem from="1549817242760" duration="2314000" />
     </task>
     <task id="LOCAL-00001" summary="Adding on a src folder">
       <created>1548455503174</created>
@@ -558,11 +581,18 @@
       <option name="project" value="LOCAL" />
       <updated>1549535567604</updated>
     </task>
-    <option name="localTasksCounter" value="22" />
+    <task id="LOCAL-00022" summary="Comment cmake">
+      <created>1549823176847</created>
+      <option name="number" value="00022" />
+      <option name="presentableId" value="LOCAL-00022" />
+      <option name="project" value="LOCAL" />
+      <updated>1549823176847</updated>
+    </task>
+    <option name="localTasksCounter" value="23" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="187224000" />
+    <option name="totallyTimeSpent" value="188417000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -583,15 +613,15 @@
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32941177" />
       <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.23510292" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.3272727" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.32719395" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" weight="0.32719395" />
       <window_info anchor="bottom" id="Database Changes" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Messages" order="8" weight="0.29035753" />
-      <window_info anchor="bottom" id="Terminal" order="9" weight="0.32834226" />
+      <window_info anchor="bottom" id="Terminal" order="9" weight="0.32827735" />
       <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
-      <window_info anchor="bottom" id="Version Control" order="11" weight="0.18181819" />
+      <window_info anchor="bottom" id="Version Control" order="11" weight="0.18093175" />
       <window_info anchor="bottom" id="CMake" order="12" weight="0.32394367" />
       <window_info anchor="bottom" id="Inspection Results" order="13" weight="0.32834226" />
       <window_info anchor="right" id="Commander" order="0" weight="0.4" />
@@ -662,7 +692,8 @@
     <MESSAGE value="Add from surface get distance" />
     <MESSAGE value="Enhancement" />
     <MESSAGE value="Fix : constant dimZ" />
-    <option name="LAST_COMMIT_MESSAGE" value="Fix : constant dimZ" />
+    <MESSAGE value="Comment cmake" />
+    <option name="LAST_COMMIT_MESSAGE" value="Comment cmake" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -677,7 +708,7 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/fichier_contrainte_2D.txt">
+    <entry file="file://$PROJECT_DIR$/io/fichier_contrainte_2D.txt">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
     <entry file="file://$PROJECT_DIR$/src/console.h" />
@@ -768,13 +799,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/imgui/imgui.h">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1680">
-          <caret line="745" column="25" selection-start-line="745" selection-start-column="25" selection-end-line="745" selection-end-column="25" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/imgui/imgui_demo.cpp">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="329">
@@ -812,13 +836,6 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/file_tools.hpp">
       <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/file_tools.cpp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="12" column="40" selection-start-line="12" selection-start-column="40" selection-end-line="12" selection-end-column="40" />
-        </state>
-      </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/create_output_file.cpp">
       <provider selected="true" editor-type-id="text-editor">
@@ -958,10 +975,17 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/imgui/imgui.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="190">
+          <caret line="1204" selection-start-line="1204" selection-end-line="1204" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main.cpp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="151">
-          <caret line="138" column="7" selection-start-line="138" selection-start-column="7" selection-end-line="138" selection-end-column="7" />
+        <state relative-caret-position="153">
+          <caret line="200" column="38" selection-start-line="200" selection-start-column="38" selection-end-line="200" selection-end-column="38" />
           <folding>
             <element signature="e#355#373#0" expanded="true" />
           </folding>
@@ -970,8 +994,15 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/CMakeLists.txt">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="493">
-          <caret line="53" column="66" selection-start-line="53" selection-start-column="66" selection-end-line="53" selection-end-column="66" />
+        <state relative-caret-position="731">
+          <caret line="43" column="25" selection-start-line="43" selection-start-column="25" selection-end-line="43" selection-end-column="25" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/file_tools.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="204">
+          <caret line="12" column="43" selection-start-line="12" selection-start-column="43" selection-end-line="12" selection-end-column="43" />
         </state>
       </provider>
     </entry>
