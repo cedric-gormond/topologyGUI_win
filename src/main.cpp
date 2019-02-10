@@ -36,13 +36,15 @@ using namespace std;
 string current_time;
 
 int main() {
+    cout << " topologyGUI - Welcome" << endl;
+
     /*
      * ---------------------------------------------------------------
      *                INPUT FILE
      * ---------------------------------------------------------------
      */
     //Please past the path's file ;"/Users/cedricgormond/Desktop/topologyGUI/fichier_contrainte_2D.txt"
-    string file_path = "io/fichier_contrainte_2D.txt"; //FULL PATH
+    string file_path = "io/cstr_file.txt"; //FULL PATH
 
     ifstream file(file_path.c_str(), ios::in);
     string input_filename = getFilename(file_path); // get the input file name WITHOUT extension
@@ -55,7 +57,7 @@ int main() {
         cout << " * Cannot find  :" <<endl;
         SplitFilename(file_path);
 
-        cout << endl << " * The constraint file must be named : fichier_contrainte_2D.txt \n \n";
+        cout << endl << " * The constraint file must be named : cstr_file.txt \n \n";
         cout << " * Exit" <<endl<<endl;
 
         exit (EXIT_FAILURE);
