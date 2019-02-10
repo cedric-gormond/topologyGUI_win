@@ -46,28 +46,29 @@ set(SOURCE_FILES
         src/get_time.h
         src/surface.cpp src/surface.h)
 
+# --- Build libraries
 set (CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -static-libgcc -static-libstdc++") #a voir
 
+# --- Sources files
 add_executable(topologyGUI ${SOURCE_FILES})
 
-# Boost
+# --- Boost
 SET(CMAKE_INCLUDE_PATH ${CMAKE_INCLUDE_PATH} "C:/win32libs/boost")
 SET(CMAKE_LIBRARY_PATH ${CMAKE_LIBRARY_PATH} "C:/win32libs/boost/lib")
 
 find_package(Boost ${boost_min_ver})
-
 if(Boost_FOUND)
     find_package(Boost ${boost_min_ver} COMPONENTS ${boost_libs})
 endif()
-
 target_link_libraries(${PROJECT_NAME} ${Boost_LIBRARIES})
 
-# ImGui
+# --- ImGui
 include_directories(imgui)
 
-# ImGui/SFML
+# --- ImGui/SFML
 include_directories(imgui-sfml)
 
+# --- OpenGL & GULT
 # CMAKE
 INCLUDE(FindOpenGL)
 
@@ -77,7 +78,7 @@ INCLUDE_DIRECTORIES(${OPENGL_INCLUDE_DIR})
 # On link notre projet avec les libs OpenGL
 TARGET_LINK_LIBRARIES( ${PROJECT_NAME} ${OPENGL_LIBRARIES})
 
-# SFML
+# --- SFML
 set(SFML_ROOT D:/Libraries/SFML)
 set(SFML_STATIC_LIBRARIES TRUE)
 
