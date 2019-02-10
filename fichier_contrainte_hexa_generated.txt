@@ -1,0 +1,35 @@
+create_clock -period 5.000 -name clk -waveform {0.000 2.500} [get_ports Clock]
+
+
+create_pblock pblock_1
+add_cells_to_pblock [get_pblocks pblock_1] [get_cells -quiet [list GEN_Y[-1].GEN_X[-1].GEN_ROUTER_TOP.GEN_ROUTER_TOP_RIGHT.Router}]]
+resize_pblock [get_pblocks pblock_1] -add {SLICE_X95Y89:SLICE_X105Y111}
+
+create_pblock pblock_2
+add_cells_to_pblock [get_pblocks pblock_2] [get_cells -quiet [list GEN_Y[-1].GEN_X[-1].GEN_ROUTER_TOP.GEN_ROUTER_TOP_RIGHT.Router}]]
+resize_pblock [get_pblocks pblock_2] -add {SLICE_X145Y90:SLICE_X155Y110}
+
+create_pblock pblock_3
+add_cells_to_pblock [get_pblocks pblock_3] [get_cells -quiet [list GEN_Y[-1].GEN_X[-1].GEN_ROUTER_TOP.GEN_ROUTER_TOP_RIGHT.Router}]]
+resize_pblock [get_pblocks pblock_3] -add {SLICE_X131Y126:SLICE_X139Y144}
+
+create_pblock pblock_4
+add_cells_to_pblock [get_pblocks pblock_4] [get_cells -quiet [list GEN_Y[-1].GEN_X[-1].GEN_ROUTER_TOP.GEN_ROUTER_TOP_RIGHT.Router}]]
+resize_pblock [get_pblocks pblock_4] -add {SLICE_X96Y142:SLICE_X104Y158}
+
+create_pblock pblock_5
+add_cells_to_pblock [get_pblocks pblock_5] [get_cells -quiet [list GEN_Y[-1].GEN_X[-1].GEN_ROUTER_TOP.GEN_ROUTER_TOP_RIGHT.Router}]]
+resize_pblock [get_pblocks pblock_5] -add {SLICE_X61Y126:SLICE_X69Y144}
+
+create_pblock pblock_6
+add_cells_to_pblock [get_pblocks pblock_6] [get_cells -quiet [list GEN_Y[-1].GEN_X[-1].GEN_ROUTER_TOP.GEN_ROUTER_TOP_RIGHT.Router}]]
+resize_pblock [get_pblocks pblock_6] -add {SLICE_X47Y92:SLICE_X53Y108}
+
+create_pblock pblock_7
+add_cells_to_pblock [get_pblocks pblock_7] [get_cells -quiet [list GEN_Y[-1].GEN_X[-1].GEN_ROUTER_TOP.GEN_ROUTER_TOP_RIGHT.Router}]]
+resize_pblock [get_pblocks pblock_7] -add {SLICE_X62Y56:SLICE_X68Y74}
+
+create_pblock pblock_8
+add_cells_to_pblock [get_pblocks pblock_8] [get_cells -quiet [list GEN_Y[-1].GEN_X[-1].GEN_ROUTER_TOP.GEN_ROUTER_TOP_RIGHT.Router}]]
+resize_pblock [get_pblocks pblock_8] -add {SLICE_X96Y40:SLICE_X104Y60}
+

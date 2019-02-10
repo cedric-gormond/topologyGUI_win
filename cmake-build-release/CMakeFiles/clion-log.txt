@@ -1,0 +1,9 @@
+"D:\JetBrains\CLion 2018.2.6\bin\cmake\win\bin\cmake.exe" -DCMAKE_BUILD_TYPE=Release -G "CodeBlocks - MinGW Makefiles" D:\Developpement\topologyGUI
+-- Boost version: 1.69.0
+-- Boost version: 1.69.0
+-- Found SFML 2.4.2 in D:/Libraries/SFML/include
+---> ImGui directory not found. Set IMGUI_ROOT to imgui's top-level path (containing "imgui.cpp" and "imgui.h" files).
+
+-- Configuring done
+-- Generating done
+-- Build files have been written to: D:/Developpement/topologyGUI/cmake-build-release

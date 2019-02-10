@@ -1,0 +1,27 @@
+pblock_1  (GEN_Y[0] GEN_X[0])  
+X0 : 6	Y0 : 15	  ||	X1 : 16	  Y1 : 37
+
+pblock_2  (GEN_Y[0] GEN_X[1])  
+X0 : 106	Y0 : 16	  ||	X1 : 116	  Y1 : 36
+
+pblock_3  (GEN_Y[0] GEN_X[2])  
+X0 : 207	Y0 : 17	  ||	X1 : 215	  Y1 : 35
+
+pblock_4  (GEN_Y[1] GEN_X[0])  
+X0 : 7	Y0 : 118	  ||	X1 : 15	  Y1 : 134
+
+pblock_5  (GEN_Y[1] GEN_X[1])  
+X0 : 107	Y0 : 117	  ||	X1 : 115	  Y1 : 135
+
+pblock_6  (GEN_Y[1] GEN_X[2])  
+X0 : 208	Y0 : 118	  ||	X1 : 214	  Y1 : 134
+
+pblock_7  (GEN_Y[2] GEN_X[0])  
+X0 : 8	Y0 : 217	  ||	X1 : 14	  Y1 : 235
+
+pblock_8  (GEN_Y[2] GEN_X[1])  
+X0 : 107	Y0 : 216	  ||	X1 : 115	  Y1 : 236
+
+pblock_9  (GEN_Y[2] GEN_X[2])  
+X0 : 207	Y0 : 219	  ||	X1 : 215	  Y1 : 233
+

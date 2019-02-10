@@ -1,0 +1,105 @@
+create_clock -period 5.000 -name clk -waveform {0.000 2.500} [get_ports Clock]
+
+
+create_pblock pblock_1
+add_cells_to_pblock [get_pblocks pblock_1] [get_cells -quiet [list {GEN_Z[0].GEN_Y[0].GEN_X[0].GEN_ROUTER_BOTTOM.GEN_ROUTER_BOTTOM_LEFT.Router}]]
+resize_pblock [get_pblocks pblock_1] -add {SLICE_X6Y15:SLICE_X16Y38}
+resize_pblock [get_pblocks pblock_1] -add {DSP48E2_X1Y6:DSP48E2_X2Y13}
+resize_pblock [get_pblocks pblock_1] -add {RAMB18_X1Y6:RAMB18_X1Y13}
+resize_pblock [get_pblocks pblock_1] -add {RAMB36_X1Y3:RAMB36_X1Y6}
+create_pblock pblock_2
+add_cells_to_pblock [get_pblocks pblock_2] [get_cells -quiet [list {GEN_Z[0].GEN_Y[0].GEN_X[1].GEN_ROUTER_BOTTOM.GEN_ROUTER_BOTTOM_CENTRAL.Router}]]
+resize_pblock [get_pblocks pblock_2] -add {SLICE_X36Y16:SLICE_X47Y37}
+resize_pblock [get_pblocks pblock_2] -add {DSP48E2_X7Y8:DSP48E2_X7Y13}
+resize_pblock [get_pblocks pblock_2] -add {RAMB18_X5Y8:RAMB18_X5Y13}
+resize_pblock [get_pblocks pblock_2] -add {RAMB36_X5Y4:RAMB36_X5Y6}
+create_pblock pblock_3
+add_cells_to_pblock [get_pblocks pblock_3] [get_cells -quiet [list {GEN_Z[0].GEN_Y[0].GEN_X[2].GEN_ROUTER_BOTTOM.GEN_ROUTER_BOTTOM_RIGHT.Router}]]
+resize_pblock [get_pblocks pblock_3] -add {SLICE_X62Y18:SLICE_X70Y36}
+resize_pblock [get_pblocks pblock_3] -add {DSP48E2_X11Y8:DSP48E2_X12Y13}
+resize_pblock [get_pblocks pblock_3] -add {RAMB18_X8Y8:RAMB18_X8Y13}
+resize_pblock [get_pblocks pblock_3] -add {RAMB36_X8Y4:RAMB36_X8Y6}
+create_pblock pblock_4
+add_cells_to_pblock [get_pblocks pblock_4] [get_cells -quiet [list {GEN_Z[0].GEN_Y[1].GEN_X[0].GEN_ROUTER_MIDDLE.GEN_ROUTER_MIDDLE_LEFT.Router}]]
+resize_pblock [get_pblocks pblock_4] -add {SLICE_X7Y86:SLICE_X16Y103}
+resize_pblock [get_pblocks pblock_4] -add {DSP48E2_X1Y36:DSP48E2_X2Y39}
+resize_pblock [get_pblocks pblock_4] -add {RAMB18_X1Y36:RAMB18_X1Y39}
+resize_pblock [get_pblocks pblock_4] -add {RAMB36_X1Y18:RAMB36_X1Y19}
+create_pblock pblock_5
+add_cells_to_pblock [get_pblocks pblock_5] [get_cells -quiet [list {GEN_Z[0].GEN_Y[1].GEN_X[1].GEN_ROUTER_MIDDLE.GEN_ROUTER_MIDDLE_CENTRAL.Router}]]
+resize_pblock [get_pblocks pblock_5] -add {SLICE_X37Y85:SLICE_X45Y104}
+resize_pblock [get_pblocks pblock_5] -add {DSP48E2_X7Y34:DSP48E2_X7Y41}
+resize_pblock [get_pblocks pblock_5] -add {RAMB18_X5Y34:RAMB18_X5Y41}
+resize_pblock [get_pblocks pblock_5] -add {RAMB36_X5Y17:RAMB36_X5Y20}
+create_pblock pblock_6
+add_cells_to_pblock [get_pblocks pblock_6] [get_cells -quiet [list {GEN_Z[0].GEN_Y[1].GEN_X[2].GEN_ROUTER_MIDDLE.GEN_ROUTER_MIDDLE_RIGHT.Router}]]
+resize_pblock [get_pblocks pblock_6] -add {SLICE_X63Y85:SLICE_X70Y101}
+resize_pblock [get_pblocks pblock_6] -add {DSP48E2_X12Y34:DSP48E2_X12Y39}
+resize_pblock [get_pblocks pblock_6] -add {RAMB18_X8Y34:RAMB18_X8Y39}
+resize_pblock [get_pblocks pblock_6] -add {RAMB36_X8Y17:RAMB36_X8Y19}
+create_pblock pblock_7
+add_cells_to_pblock [get_pblocks pblock_7] [get_cells -quiet [list {GEN_Z[0].GEN_Y[2].GEN_X[0].GEN_ROUTER_TOP.GEN_ROUTER_TOP_LEFT.Router}]]
+resize_pblock [get_pblocks pblock_7] -add {SLICE_X8Y156:SLICE_X14Y175}
+resize_pblock [get_pblocks pblock_7] -add {DSP48E2_X1Y64:DSP48E2_X2Y69}
+resize_pblock [get_pblocks pblock_7] -add {RAMB18_X1Y64:RAMB18_X1Y69}
+resize_pblock [get_pblocks pblock_7] -add {RAMB36_X1Y32:RAMB36_X1Y34}
+create_pblock pblock_8
+add_cells_to_pblock [get_pblocks pblock_8] [get_cells -quiet [list {GEN_Z[0].GEN_Y[2].GEN_X[1].GEN_ROUTER_TOP.GEN_ROUTER_TOP_CENTRAL.Router}]]
+resize_pblock [get_pblocks pblock_8] -add {SLICE_X36Y157:SLICE_X45Y178}
+resize_pblock [get_pblocks pblock_8] -add {DSP48E2_X7Y64:DSP48E2_X7Y69}
+create_pblock pblock_9
+add_cells_to_pblock [get_pblocks pblock_9] [get_cells -quiet [list {GEN_Z[0].GEN_Y[2].GEN_X[2].GEN_ROUTER_TOP.GEN_ROUTER_TOP_RIGHT.Router}]]
+resize_pblock [get_pblocks pblock_9] -add {SLICE_X62Y158:SLICE_X70Y173}
+resize_pblock [get_pblocks pblock_9] -add {DSP48E2_X12Y64:DSP48E2_X12Y67}
+resize_pblock [get_pblocks pblock_9] -add {RAMB18_X8Y64:RAMB18_X8Y67}
+resize_pblock [get_pblocks pblock_9] -add {RAMB36_X8Y32:RAMB36_X8Y33}
+create_pblock pblock_10
+add_cells_to_pblock [get_pblocks pblock_10] [get_cells -quiet [list {GEN_Z[1].GEN_Y[0].GEN_X[0].GEN_ROUTER_BOTTOM.GEN_ROUTER_BOTTOM_LEFT.Router}]]
+resize_pblock [get_pblocks pblock_10] -add {SLICE_X27Y50:SLICE_X34Y68}
+resize_pblock [get_pblocks pblock_10] -add {DSP48E2_X5Y20:DSP48E2_X6Y25}
+resize_pblock [get_pblocks pblock_10] -add {RAMB18_X4Y20:RAMB18_X4Y25}
+resize_pblock [get_pblocks pblock_10] -add {RAMB36_X4Y10:RAMB36_X4Y12}
+create_pblock pblock_11
+add_cells_to_pblock [get_pblocks pblock_11] [get_cells -quiet [list {GEN_Z[1].GEN_Y[0].GEN_X[1].GEN_ROUTER_BOTTOM.GEN_ROUTER_BOTTOM_CENTRAL.Router}]]
+resize_pblock [get_pblocks pblock_11] -add {SLICE_X52Y52:SLICE_X58Y67}
+resize_pblock [get_pblocks pblock_11] -add {DSP48E2_X9Y22:DSP48E2_X9Y25}
+resize_pblock [get_pblocks pblock_11] -add {RAMB18_X7Y22:RAMB18_X7Y25}
+resize_pblock [get_pblocks pblock_11] -add {RAMB36_X7Y11:RAMB36_X7Y12}
+create_pblock pblock_12
+add_cells_to_pblock [get_pblocks pblock_12] [get_cells -quiet [list {GEN_Z[1].GEN_Y[0].GEN_X[2].GEN_ROUTER_BOTTOM.GEN_ROUTER_BOTTOM_RIGHT.Router}]]
+resize_pblock [get_pblocks pblock_12] -add {SLICE_X81Y50:SLICE_X92Y67}
+resize_pblock [get_pblocks pblock_12] -add {DSP48E2_X15Y20:DSP48E2_X16Y25}
+create_pblock pblock_13
+add_cells_to_pblock [get_pblocks pblock_13] [get_cells -quiet [list {GEN_Z[1].GEN_Y[1].GEN_X[0].GEN_ROUTER_MIDDLE.GEN_ROUTER_MIDDLE_LEFT.Router}]]
+resize_pblock [get_pblocks pblock_13] -add {SLICE_X27Y113:SLICE_X35Y127}
+resize_pblock [get_pblocks pblock_13] -add {DSP48E2_X5Y46:DSP48E2_X6Y49}
+resize_pblock [get_pblocks pblock_13] -add {RAMB18_X4Y46:RAMB18_X4Y49}
+resize_pblock [get_pblocks pblock_13] -add {RAMB36_X4Y23:RAMB36_X4Y24}
+create_pblock pblock_14
+add_cells_to_pblock [get_pblocks pblock_14] [get_cells -quiet [list {GEN_Z[1].GEN_Y[1].GEN_X[1].GEN_ROUTER_MIDDLE.GEN_ROUTER_MIDDLE_CENTRAL.Router}]]
+resize_pblock [get_pblocks pblock_14] -add {SLICE_X51Y110:SLICE_X58Y127}
+resize_pblock [get_pblocks pblock_14] -add {DSP48E2_X9Y44:DSP48E2_X10Y49}
+resize_pblock [get_pblocks pblock_14] -add {RAMB18_X7Y44:RAMB18_X7Y49}
+resize_pblock [get_pblocks pblock_14] -add {RAMB36_X7Y22:RAMB36_X7Y24}
+create_pblock pblock_15
+add_cells_to_pblock [get_pblocks pblock_15] [get_cells -quiet [list {GEN_Z[1].GEN_Y[1].GEN_X[2].GEN_ROUTER_MIDDLE.GEN_ROUTER_MIDDLE_RIGHT.Router}]]
+resize_pblock [get_pblocks pblock_15] -add {SLICE_X81Y110:SLICE_X91Y126}
+resize_pblock [get_pblocks pblock_15] -add {DSP48E2_X15Y44:DSP48E2_X16Y49}
+resize_pblock [get_pblocks pblock_15] -add {RAMB18_X10Y44:RAMB18_X10Y49}
+resize_pblock [get_pblocks pblock_15] -add {RAMB36_X10Y22:RAMB36_X10Y24}
+create_pblock pblock_16
+add_cells_to_pblock [get_pblocks pblock_16] [get_cells -quiet [list {GEN_Z[1].GEN_Y[2].GEN_X[0].GEN_ROUTER_TOP.GEN_ROUTER_TOP_LEFT.Router}]]
+resize_pblock [get_pblocks pblock_16] -add {SLICE_X27Y191:SLICE_X34Y209}
+resize_pblock [get_pblocks pblock_16] -add {DSP48E2_X5Y78:DSP48E2_X5Y83}
+resize_pblock [get_pblocks pblock_16] -add {RAMB18_X4Y78:RAMB18_X4Y83}
+resize_pblock [get_pblocks pblock_16] -add {RAMB36_X4Y39:RAMB36_X4Y41}
+create_pblock pblock_17
+add_cells_to_pblock [get_pblocks pblock_17] [get_cells -quiet [list {GEN_Z[1].GEN_Y[2].GEN_X[1].GEN_ROUTER_TOP.GEN_ROUTER_TOP_CENTRAL.Router}]]
+resize_pblock [get_pblocks pblock_17] -add {SLICE_X52Y191:SLICE_X58Y209}
+resize_pblock [get_pblocks pblock_17] -add {DSP48E2_X9Y78:DSP48E2_X9Y83}
+resize_pblock [get_pblocks pblock_17] -add {RAMB18_X7Y78:RAMB18_X7Y83}
+resize_pblock [get_pblocks pblock_17] -add {RAMB36_X7Y39:RAMB36_X7Y41}
+create_pblock pblock_18
+add_cells_to_pblock [get_pblocks pblock_18] [get_cells -quiet [list {GEN_Z[1].GEN_Y[2].GEN_X[2].GEN_ROUTER_TOP.GEN_ROUTER_TOP_RIGHT.Router}]]
+resize_pblock [get_pblocks pblock_18] -add {SLICE_X82Y191:SLICE_X90Y210}
+resize_pblock [get_pblocks pblock_18] -add {DSP48E2_X15Y78:DSP48E2_X16Y83}
