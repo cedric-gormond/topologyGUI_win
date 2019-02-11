@@ -6,7 +6,7 @@ Un [Guide Utilisateur](https://github.com/cedric-gormond/topologyGUI_win/blob/ma
 
 ## Pour commencer
 
-Créer et/ou modifier des fichiers de contraintes d'architecture NoC pour le logiciel Xilinx Vivado. Ces fichiers de contraintes contiennent l'emplacement de routeurs (blocs) correspondant à une certaine topologie, que l'on veut modifier. Ce programme a été créé pour le **Laboratoire Hubert Curien (CNRS)**.
+Créer et/ou modifier des fichiers de contraintes d'architecture NoC pour le logiciel Xilinx Vivado. Ces fichiers de contraintes contiennent l'emplacement de routeurs (blocs) correspondant à une certaine topologie, que l'on veut modifier. Ce programme a été créé pour le **[Laboratoire Hubert Curien (CNRS)](https://laboratoirehubertcurien.univ-st-etienne.fr/en/index.html)**.
 
 ### Installation
 
