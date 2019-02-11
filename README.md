@@ -1,6 +1,8 @@
 # topologyGUI pour Windows
 
-Un Guide Utilisateur illustré est disponible dans le dossier du projet.
+![alt text](https://laboratoirehubertcurien.univ-st-etienne.fr/skins/labhcurien/resources//img/logo.png "Laboratoire Hubert Curien")
+
+Un [Guide Utilisateur](https://github.com/cedric-gormond/topologyGUI_win/blob/master/Guide%20Utilisateur.pdf) illustré est disponible dans le dossier du projet.
 
 ## Pour commencer
 
