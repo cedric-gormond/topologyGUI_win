@@ -6,7 +6,7 @@ Créer et/ou modifier des fichiers de contraintes d'architecture NoC pour le log
 
 ### Installation
 
-Vous devez extraire le contenu de l'archive dans un expace de travail. Pour utiliser le programme, vous devez lancer l'éxecutable contenue dans le dossier extracté.
+Vous devez extraire le contenu de l'archive dans un espace de travail. Pour utiliser le programme, vous devez lancer l'éxecutable contenue dans le dossier.
 
 ## Utiliser le programme
 
