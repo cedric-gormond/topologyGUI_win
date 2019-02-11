@@ -1,5 +1,7 @@
 # topology-GUI pour Windows
 
+Un guide d'utilisateur illustré au format PDF est disponible dans le dossier du projet. 
+
 ## Pour commencer
 
 Créer et/ou modifier des fichiers de contraintes d'architecture NoC pour le logiciel Xilinx Vivado. Ces fichiers de contraintes contiennent l'emplacement de routeurs (blocs) correspondant à une certaine topologie, que l'on veut modifier. Ce programme a été créé pour le **Laboratoire Hubert Curien (CNRS)**.
