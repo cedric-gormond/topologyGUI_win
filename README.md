@@ -1,41 +1,169 @@
-# topologyGUI_win
-(in french)
+# Project Title
 
-Créer et/ou modifier des fichiers de contraintes d'architecture NoC pour le logiciel
-Xilinx Vivado. Ces fichiers de contraintes contiennent l'emplacement de
-routeurs (blocs) correspondant à une certaine topologie, que l'on veut modifier.
-Ce programme a été créé pour le **Laboratoire Hubert Curien (CNRS)**.
+One Paragraph of project description goes here
 
-## Comment fonctionne le logiciel ?
+## Getting Started
 
-- Utiliser un fichier de contrainte existant, généré auparavant par Vivado, pour l'importer et modifier ses caractéristiques, notamment la disposition des routeurs.
+These instructions will get you a copy of the project up and running on your local machine for development and testing purposes. See deployment for notes on how to deploy the project on a live system.
 
-- Créer un nouveau fichier de contrainte en précisant la disposition des routeurs
+### Prerequisites
 
-![alt sketch](https://user-images.githubusercontent.com/17772801/51992550-7b6a0a80-24ad-11e9-94f2-ee78873cc239.png)
+What things you need to install the software and how to install them
 
-1. **A partir d'un fichier de contrainte**
+```
+Give examples
+```
 
-   Il faut premièrement importer un fichier de contrainte au **format .txt** (le logiciel n'arrive pas encore à reconnaître les format .xdc). Les blocs contenu dans ce fichier ont été placé aléatoirement ou approximativement par l'utilisateur sur Vivado. 
+### Installing
 
-   Le logiciel va ensuite extraire les données de ce fichier de contrainte comme l'ensemble des blocs avec leur position **XY correspondante (slices)**. Il est possible à présent de changer les caractéristiques de ce fichier en définissant une certaine topologie. L'utilisateur a le choix entre une topologie maillée 2D, hexagonale 2D et maillée 3D.
+A step by step series of examples that tell you have to get a development env running
 
-   <u>2D maillée:</u>  l'utilisateur doit spécifier la **distance entre le centre de chaque bloc.** La hauteur et la largeur de chaque bloc est basée sur celle du premier (pbloc1). Il est ainsi possible de conserver la hauteur et largeur du bloc1 par défaut ou de la redimensionner, comme illustré sur la figure 2 avec **w'** et **h'**. ![2d maille](https://user-images.githubusercontent.com/17772801/52047707-e10bd480-2549-11e9-8bd6-777aff1ddad8.png)
+Say what the step will be
 
-   <u>2D hexa:</u> l'utilisateur doit spécifier la **distance (rayon) entre le centre du bloc1 et les centres des n-1 blocs sur le cercle**. Comme pour la topologie 2D maillée, la hauteur et la largeur de chaque bloc est basée sur celle du premier (pbloc1). Il est donc possible de conserver ces donnéees ou de les redimensionner.![2d hexa](https://user-images.githubusercontent.com/17772801/52047706-e10bd480-2549-11e9-8150-920f9b6844f3.png)
+```
+Give the example
+```
 
-<u>3D maillée:</u>  l'utilisateur doit spécifier la **distance entre le centre de chaque bloc.** Cependant, l'utilisateur est limité à seulement une profondeur (pour une meilleure visibilité).  Comme pour la topologie 2D maillée, la hauteur et la largeur de chaque bloc est basée sur celle du premier (pbloc1). Il est donc possible de conserver ces donnéees ou de les redimensionner.
+And repeat
 
-Les blocs en profondeur commencent avec une coordonées **X0 + D/2** et **Y0 + D/2** (voir schéma) 
+```
+until finished
+```
 
-![3d maille-2](https://user-images.githubusercontent.com/17772801/52051068-ba9e6700-2552-11e9-80ce-84024e3a2d9c.png)
+End with an example of getting some data out of the system or using it for a little demo
 
-**ATTENTION !** Il n'est encore pas possible de générer une topologie 3D maillée à partir d'une topologie 2D maillée ou hexagonale, et inversement.
+## Running the tests
 
-2. **Créer un fichier de contrainte à partir de zéro** (WIP)
+Explain how to run the automated tests for this system
 
-   Sans importer de fichier, l'utilisateur spéficie :
+### Break down into end to end tests
 
-- les dimensions de son fichier de contrainte **dimX** et **dimY**
-- les caractéristiques de son premier routeur, c'est à dire ses coordonnées **X0Y0** et **X1Y1**
-- la topologie souhaîtée 
+Explain what these tests test and why
+
+```
+Give an example
+```
+
+### And coding style tests
+
+Explain what these tests test and why
+
+```
+Give an example
+```
+
+## Deployment
+
+Add additional notes about how to deploy this on a live system
+
+## Built With
+
+* [Dropwizard](http://www.dropwizard.io/1.0.2/docs/) - The web framework used
+* [Maven](https://maven.apache.org/) - Dependency Management
+* [ROME](https://rometools.github.io/rome/) - Used to generate RSS Feeds
+
+## Contributing
+
+Please read [CONTRIBUTING.md](https://gist.github.com/PurpleBooth/b24679402957c63ec426) for details on our code of conduct, and the process for submitting pull requests to us.
+
+## Versioning
+
+We use [SemVer](http://semver.org/) for versioning. For the versions available, see the [tags on this repository](https://github.com/your/project/tags). 
+
+## Authors
+
+* **Billie Thompson** - *Initial work* - [PurpleBooth](https://github.com/PurpleBooth)
+
+See also the list of [contributors](https://github.com/your/project/contributors) who participated in this project.
+
+## License
+
+This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details
+
+## Acknowledgments
+
+* Hat tip to anyone who's code was used
+* Inspiration
+* etc
+
+# Project Title
+
+One Paragraph of project description goes here
+
+## Getting Started
+
+These instructions will get you a copy of the project up and running on your local machine for development and testing purposes. See deployment for notes on how to deploy the project on a live system.
+
+### Prerequisites
+
+What things you need to install the software and how to install them
+
+```
+Give examples
+```
+
+### Installing
+
+A step by step series of examples that tell you have to get a development env running
+
+Say what the step will be
+
+```
+Give the example
+```
+
+And repeat
+
+```
+until finished
+```
+
+End with an example of getting some data out of the system or using it for a little demo
+
+## Running the tests
+
+Explain how to run the automated tests for this system
+
+### Break down into end to end tests
+
+Explain what these tests test and why
+
+```
+Give an example
+```
+
+### And coding style tests
+
+Explain what these tests test and why
+
+```
+Give an example
+```
+
+## Deployment
+
+Add additional notes about how to deploy this on a live system
+
+## Built With
+
+* [Dropwizard](http://www.dropwizard.io/1.0.2/docs/) - The web framework used
+* [Maven](https://maven.apache.org/) - Dependency Management
+* [ROME](https://rometools.github.io/rome/) - Used to generate RSS Feeds
+
+## Contributing
+
+Please read [CONTRIBUTING.md](https://gist.github.com/PurpleBooth/b24679402957c63ec426) for details on our code of conduct, and the process for submitting pull requests to us.
+
+## Versioning
+
+We use [SemVer](http://semver.org/) for versioning. For the versions available, see the [tags on this repository](https://github.com/your/project/tags). 
+
+## Authors
+
+* **Billie Thompson** - *Initial work* - [PurpleBooth](https://github.com/PurpleBooth)
+
+See also the list of [contributors](https://github.com/your/project/contributors) who participated in this project.
+
+## License
+
+This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details
