@@ -41,6 +41,7 @@ void create_ctr_file(std::ofstream& file_output, string path,constraint *ctr, in
         
         file_output << endl;
     }
+    cout << " * Success " << endl << endl;
 }
 
 void create_txt_file(std::ofstream& file_output, string path,constraint *ctr, int size)

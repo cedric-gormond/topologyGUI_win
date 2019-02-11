@@ -37,7 +37,6 @@ string current_time;
 
 int main() {
     cout << " topologyGUI - Welcome" << endl;
-
     /*
      * ---------------------------------------------------------------
      *                INPUT FILE
@@ -58,6 +57,7 @@ int main() {
         SplitFilename(file_path);
 
         cout << endl << " * The constraint file must be named : cstr_file.txt \n \n";
+        system("pause");
         cout << " * Exit" <<endl<<endl;
 
         exit (EXIT_FAILURE);
@@ -92,9 +92,6 @@ int main() {
 
     // Set the center of all blocs
     dimensions_of_bloc(CONTRAINT, nb_pblocs);
-
-    // Display blocs in console
-    //displayBlocsFromCtr(CONTRAINT, nb_pblocs);
 
     //Resize constraint
     auto *CONTRAINT_RESIZE = new constraint[nb_pblocs];
@@ -208,30 +205,9 @@ int main() {
         if (ImGui::CollapsingHeader("Help")) {
             ImGui::BulletText("TopologyGUI doesn't recognize .xdc files ");
             ImGui::BulletText("TopologyGUI can only generate constraint files with their respective dimensions. \n");
-            ImGui::BulletText("TopologyGUI can only create 2D constraint files. \n");
+            ImGui::BulletText("TopologyGUI generates constraint files in the io directory. \n");
         }
         ImGui::Separator();
-
-        /*
-         *  Open file
-         */
-        if (ImGui::CollapsingHeader("Open file"))
-        {
-            ImGui::BulletText("WIP (à faire un collapsed ou en menu)");
-            /*
-            if (file) {
-                my_log.AddLog("%s [info] File found : \n", &current_time[0]);
-                my_log.AddLog("%s",&file_path[0]);
-            }
-            else {
-                my_log.AddLog("%s [error] Cannot find  :",&current_time[0]);
-                my_log.AddLog("%s",&file_path[0]);
-
-                my_log.AddLog("%s [suggest] The constraint file must be named : fichier_contrainte_2D.txt \n",&current_time[0]);
-                my_log.AddLog("%s [info] Exit : \n", &current_time[0]);
-            }
-             */
-        }
 
         /*
          *  Generate simplified constraint file without any modification
@@ -666,7 +642,7 @@ int main() {
     }
 
     ImGui::SFML::Shutdown();
-    cout << "* Exit"<<endl;
+    cout << " * Exit"<<endl;
 
     //delete []CONTRAINT;
     //delete []CONTRAINT_RESIZE;

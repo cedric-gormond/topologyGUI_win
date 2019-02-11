@@ -10,8 +10,10 @@ void SplitFilename (const std::string& str)
 }
 
 std::string getFilename(const std::string& str){
-    size_t found = str.find_last_of("/\\");
-    std::string filename = str.substr(found+1);     // get file name
+    size_t lastindex = str.find_last_of(".");
+    std::string filename = str.substr(0, lastindex);     // get file name WITHOUT extension
+//    size_t found = str.find_last_of("/\\");
+//    std::string filename = str.substr(found+1);     // get file name
     return filename;
 }
 
