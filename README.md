@@ -1,41 +1,122 @@
-# topologyGUI_win
-(in french)
+# topologyGUI pour Windows
 
-Créer et/ou modifier des fichiers de contraintes d'architecture NoC pour le logiciel
-Xilinx Vivado. Ces fichiers de contraintes contiennent l'emplacement de
-routeurs (blocs) correspondant à une certaine topologie, que l'on veut modifier.
-Ce programme a été créé pour le **Laboratoire Hubert Curien (CNRS)**.
+![alt text](https://laboratoirehubertcurien.univ-st-etienne.fr/skins/labhcurien/resources//img/logo.png "Laboratoire Hubert Curien")
 
-## Comment fonctionne le logiciel ?
+Un [Guide Utilisateur](https://github.com/cedric-gormond/topologyGUI_win/blob/master/Guide%20Utilisateur.pdf) illustré est disponible dans le dossier du projet.
 
-- Utiliser un fichier de contrainte existant, généré auparavant par Vivado, pour l'importer et modifier ses caractéristiques, notamment la disposition des routeurs.
+## Pour commencer
 
-- Créer un nouveau fichier de contrainte en précisant la disposition des routeurs
+Créer et/ou modifier des fichiers de contraintes d'architecture NoC pour le logiciel Xilinx Vivado. Ces fichiers de contraintes contiennent l'emplacement de routeurs (blocs) correspondant à une certaine topologie, que l'on veut modifier. Ce programme a été créé pour le **[Laboratoire Hubert Curien (CNRS)](https://laboratoirehubertcurien.univ-st-etienne.fr/en/index.html)**.
 
-![alt sketch](https://user-images.githubusercontent.com/17772801/51992550-7b6a0a80-24ad-11e9-94f2-ee78873cc239.png)
+### Installation
 
-1. **A partir d'un fichier de contrainte**
+Vous devez extraire le contenu de l'archive dans un espace de travail. Pour utiliser le programme, vous devez lancer l'éxecutable `topologyGUI` contenue dans le dossier.
 
-   Il faut premièrement importer un fichier de contrainte au **format .txt** (le logiciel n'arrive pas encore à reconnaître les format .xdc). Les blocs contenu dans ce fichier ont été placé aléatoirement ou approximativement par l'utilisateur sur Vivado. 
+## Utiliser le programme
 
-   Le logiciel va ensuite extraire les données de ce fichier de contrainte comme l'ensemble des blocs avec leur position **XY correspondante (slices)**. Il est possible à présent de changer les caractéristiques de ce fichier en définissant une certaine topologie. L'utilisateur a le choix entre une topologie maillée 2D, hexagonale 2D et maillée 3D.
+### Comment importer un fichier de contrainte ?
 
-   <u>2D maillée:</u>  l'utilisateur doit spécifier la **distance entre le centre de chaque bloc.** La hauteur et la largeur de chaque bloc est basée sur celle du premier (pbloc1). Il est ainsi possible de conserver la hauteur et largeur du bloc1 par défaut ou de la redimensionner, comme illustré sur la figure 2 avec **w'** et **h'**. ![2d maille](https://user-images.githubusercontent.com/17772801/52047707-e10bd480-2549-11e9-8bd6-777aff1ddad8.png)
+Il faut premièrement modifier l’extension du fichier de contrainte au format .**`txt`** (le logiciel n'arrive pas encore à reconnaître le format `.xdc`). Ensuite, pour importer un fichier, il faut que celui-ci soit présent dans le répertoire `io` dans répertoire contenant l’exécutable. 
 
-   <u>2D hexa:</u> l'utilisateur doit spécifier la **distance (rayon) entre le centre du bloc1 et les centres des n-1 blocs sur le cercle**. Comme pour la topologie 2D maillée, la hauteur et la largeur de chaque bloc est basée sur celle du premier (pbloc1). Il est donc possible de conserver ces donnéees ou de les redimensionner.![2d hexa](https://user-images.githubusercontent.com/17772801/52047706-e10bd480-2549-11e9-8150-920f9b6844f3.png)
+**Attention, le fichier de contrainte doit avoir le nom suivant : `cstr_file.txt`**
 
-<u>3D maillée:</u>  l'utilisateur doit spécifier la **distance entre le centre de chaque bloc.** Cependant, l'utilisateur est limité à seulement une profondeur (pour une meilleure visibilité).  Comme pour la topologie 2D maillée, la hauteur et la largeur de chaque bloc est basée sur celle du premier (pbloc1). Il est donc possible de conserver ces donnéees ou de les redimensionner.
 
-Les blocs en profondeur commencent avec une coordonées **X0 + D/2** et **Y0 + D/2** (voir schéma) 
+### Les fichiers de contrainte simplifiés
 
-![3d maille-2](https://user-images.githubusercontent.com/17772801/52051068-ba9e6700-2552-11e9-80ce-84024e3a2d9c.png)
+TopologyGUI permet la génération de fichiers simplifiés. Ces fichiers simplifiés contiennent uniquement les informations essentielles d’un fichier classique (position d’un bloc avec ses coordonnées) et sont donc plus lisibles. Cependant, **ces fichiers simplifiés ne sont pas pris en compte par le logiciel Xilinx Vivado**.
 
-**ATTENTION !** Il n'est encore pas possible de générer une topologie 3D maillée à partir d'une topologie 2D maillée ou hexagonale, et inversement.
+#### Le fichier simplifié original
+- Cliquez sur « **Generate simplified constraint file»** pour générer un fichier de contrainte simplifié du fichier original, sans aucune modification. 
 
-2. **Créer un fichier de contrainte à partir de zéro** (WIP)
+#### Le fichier simplifié
+- Cliquez sur « **Generate constraint file (simplified)»** pour générer un fichier de contrainte simplifié suivant les caractéristiques sélectionnées auparavant (topologie). 
 
-   Sans importer de fichier, l'utilisateur spéficie :
+### Comment modifier d’un fichier de contrainte ?
+Il est possible de modifier les caractéristiques d’un fichier de contrainte en appliquant une certaine topologie plus homogène à celui-ci en utilisant la section « **Topology**».
 
-- les dimensions de son fichier de contrainte **dimX** et **dimY**
-- les caractéristiques de son premier routeur, c'est à dire ses coordonnées **X0Y0** et **X1Y1**
-- la topologie souhaîtée 
+1. Vérifier que la case « **Disable** » de la section **«** **Create constraint file from scratch** » est bien coché.
+
+
+2. Optionnel : Il est possible de redimensionner le premier bloc (et ainsi **tous les autres blocs**) du fichier de contrainte importé dans la section « **Dimensions** ». Saisissez la hauteur et la largeur du premier bloc.
+
+   Vous avez bien sûr la possibilité d’effectuer aucune modification en sélectionnant l’option « **Default** » de la section « **Dimensions** ». Les dimensions du premier bloc sont affichées.
+
+3. Choisissez la topologie que vous voulez appliquer au fichier de contrainte initial en saisissant la distance **d** ou **r**. Pour rappel, la distance **d** est la distance entre le centre de chaque bloc et la distance **r** est la diagonale entre les blocs hexagonaux. 
+
+4. Enregistrez le fichier de contrainte normalisé ou simplifié au format texte **.txt** ou format. **xdc** en cliquant sur « **Generate constraint file** » ou « **Generate constraint file (simplified)** ». Le fichier original ne sera pas modifié.   
+
+
+### Comment créer un fichier de contrainte ?
+
+Il est possible de créer un fichier de contrainte (en ignorant le fichier de contrainte importé) en utilisant la section « **Create constraint file from scratch** ».  
+
+#### Création de topologies 2D et 3D 
+
+1. Décochez la case « **Disable** ». En décochant cette case, le fichier de contrainte initial sera ignoré.
+
+2.	Remplissez les caractéristiques du fichier de contrainte de sortie en spécifiant le nombre de routeur en X (**dimX**), le nombre de routeur en Y (**dimY**) et les **coordonnées** du bloc1.
+
+3.  Choisissez la topologie à appliquer (**2D maillée, 2D hexagonale, 3D maillée**) et spécifiez la distance **d** ou **r** que vous souhaitez utiliser.  
+
+5.	Enregistrez le fichier de contrainte normalisé ou simplifié au format texte **.txt** ou format. **xdc** en cliquant sur « **Generate constraint file** » ou « **Generate constraint file (simplified)** ».
+
+#### Remarques à propos de la topologie 3D
+
+La topologie 3D maillée ne possède qu’une seule dimension Z, c’est-à-dire que le paramètre **dimZ** est fixé à **1** et ne peut être changé.
+
+### Comment gérer les surfaces d’une topologie ?
+
+Il est possible calculer la surface d’une topologie en utilisant la section « **Surface** ».  
+
+#### Comment calculer la surface d’une topologie ?
+
+- Cliquez sur le bouton « **Generate constraint file** ». La surface calculée est basée sur paramètres des sections précédentes. Vous pouvez soit calculez la surface d’une topologie basée sur un fichier de contrainte importé ou soit calculez la surface d’une topologie crée par le logiciel en prenant soin de décocher la case « **Disable** ». Les surfaces s’affichent de la façon suivante :
+
+#### Comment calculer la distance à partir d’une surface ?
+
+Dans la section « **Surface** », il est possible calculer la distance entre le centre de chaque bloc d’une topologie en spécifiant la surface de celle-ci. Pour pourvoir utiliser ce mode :
+
+1.	Spécifiez la surface à partir de laquelle vous voulez calculer une distance.
+
+2.  Remplissez les caractéristiques du premier bloc de la topologie en utilisant la section en spécifiant le nombre de routeur en X (**dimX**), le nombre de routeur en Y (**dimY**) et les **coordonnées** du bloc1.
+
+3.  Appuyez sur le bouton **« Get Distance** » pour voir affichez le résultat, respectif à chaque topologie.
+
+4.  Vous pouvez appliquer la distance **d** ou **r** calculée en sélectionnant la distance propre à la topologie souhaitée et en cliquant sur « **Apply selected distance** ». Le résultat apparaitra ainsi dans la section « **Topology** ».
+
+### Comment récupérer un fichier de contrainte généré ?
+
+Les fichiers de contrainte (normalisés ou simplifiés) sont générés dans le dossier `io` du projet au format imposé. Les fichiers générés respectent les appellations suivantes :
+
+| **Topologie** | **Fichier généré (output) :** | **Fichier simplifié généré (output)**   |
+| ------------- | ----------------------------- | --------------------------------------- |
+| 2D maillée    | cstr_file_2D_generated.txt    | cstr_file_2D_simplified_generated.txt   |
+| 2D hexagonale | cstr_file_hexa_generated.txt  | cstr_file_hexa_simplified_generated.txt |
+| 3D maillée    | cstr_file_3D_generated.txt    | cstr_file_3D_simplified_generated.txt   |
+
+### Log
+
+Le logiciel possède une partie log permettant de vous informer sur les différentes opérations effectuées.
+
+### Bugs
+
+Il se peut que le programme possède des bugs ou des erreurs mémoires. S’il-vous-plaît, envoyez un mail à l’adresse suivante ou de proposer une issue sur **Github** afin de les corriger : [cedric.gormond@gmail.com](mailto:cedric.gormond@gmail.com) 
+
+## Développé avec
+
+* [SFML](https://www.sfml-dev.org/community.php)  : Framework open-source permettant de rendus graphiques *(licence ‘as-is’).*
+
+* [ImGui](https://github.com/ocornut/imgui) : Librairie graphique open-source permettant l’utilisation d’un GUI *(licence MIT*)
+
+* [ImGui-SFML](https://github.com/eliasdaler/imgui-sfml)  : Librairie permettant l’intégration de la bibliothèque ImGui au Framework SFML *(licence MIT)*
+
+IDE : 
+* Clion Mac & PC
+
+## Auteur
+
+* **Cédric Gormond** - *Etudiant à Télécom Saint-Etienne*
+
+## License
+
+This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details
