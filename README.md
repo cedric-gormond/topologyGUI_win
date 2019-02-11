@@ -1,4 +1,4 @@
-# topology-GUI pour Windows
+# topologyGUI pour Windows
 
 Un guide d'utilisateur illustré au format PDF est disponible dans le dossier du projet. 
 
@@ -8,7 +8,7 @@ Créer et/ou modifier des fichiers de contraintes d'architecture NoC pour le log
 
 ### Installation
 
-Vous devez extraire le contenu de l'archive dans un espace de travail. Pour utiliser le programme, vous devez lancer l'éxecutable contenue dans le dossier.
+Vous devez extraire le contenu de l'archive dans un espace de travail. Pour utiliser le programme, vous devez lancer l'éxecutable `topologyGUI` contenue dans le dossier.
 
 ## Utiliser le programme
 
