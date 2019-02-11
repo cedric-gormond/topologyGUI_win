@@ -1,6 +1,6 @@
 # topologyGUI pour Windows
 
-Un guide d'utilisateur illustré au format PDF est disponible dans le dossier du projet. 
+Un [Guide Utilisateur](Guide Utilisateur.pdf) illustré est disponible dans le dossier du projet.
 
 ## Pour commencer
 
