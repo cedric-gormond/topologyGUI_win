@@ -16,7 +16,9 @@ Vous devez extraire le contenu de l'archive dans un espace de travail. Pour util
 
 ### Comment importer un fichier de contrainte ?
 
-Il faut premièrement modifier l’extension du fichier de contrainte au format .**txt** (le logiciel n'arrive pas encore à reconnaître le format. xdc). Ensuite, pour importer un fichier, il faut que celui-ci soit présent dans le répertoire `io` dans répertoire contenant l’exécutable. **Attention, le fichier de contrainte doit avoir le nom suivant : cstr_file.txt**
+Il faut premièrement modifier l’extension du fichier de contrainte au format .**`txt`** (le logiciel n'arrive pas encore à reconnaître le format `.xdc`). Ensuite, pour importer un fichier, il faut que celui-ci soit présent dans le répertoire `io` dans répertoire contenant l’exécutable. 
+
+**Attention, le fichier de contrainte doit avoir le nom suivant : `cstr_file.txt`**
 
 
 ### Les fichiers de contrainte simplifiés
@@ -39,7 +41,7 @@ Il est possible de modifier les caractéristiques d’un fichier de contrainte e
 
    Vous avez bien sûr la possibilité d’effectuer aucune modification en sélectionnant l’option « **Default** » de la section « **Dimensions** ». Les dimensions du premier bloc sont affichées.
 
-3. Choisissez la topologie que vous voulez appliquer au fichier de contrainte initial en saisissant la distance **d** ou **r**. Pour rappel, la distance **d** est la distance entre le centre de chaque bloc et la distance **r** est la diagonale entre les blocs hexagonaux. Pour plus d’indications, consultez la partie 3 à propos des topologies. 
+3. Choisissez la topologie que vous voulez appliquer au fichier de contrainte initial en saisissant la distance **d** ou **r**. Pour rappel, la distance **d** est la distance entre le centre de chaque bloc et la distance **r** est la diagonale entre les blocs hexagonaux. 
 
 4. Enregistrez le fichier de contrainte normalisé ou simplifié au format texte **.txt** ou format. **xdc** en cliquant sur « **Generate constraint file** » ou « **Generate constraint file (simplified)** ». Le fichier original ne sera pas modifié.   
 
@@ -52,9 +54,9 @@ Il est possible de créer un fichier de contrainte (en ignorant le fichier de co
 
 1. Décochez la case « **Disable** ». En décochant cette case, le fichier de contrainte initial sera ignoré.
 
-2.	Remplissez les caractéristiques du fichier de contrainte de sortie en spécifiant le nombre de routeur en X (**dimX**), le nombre de routeur en Y (**dimY**) et les **coordonnées** du bloc1. Pour plus d’indications, consultez la partie 2.1 à propos des coordonnées des blocs.
+2.	Remplissez les caractéristiques du fichier de contrainte de sortie en spécifiant le nombre de routeur en X (**dimX**), le nombre de routeur en Y (**dimY**) et les **coordonnées** du bloc1.
 
-3.  Choisissez la topologie à appliquer (**2D maillée, 2D hexagonale, 3D maillée**) et spécifiez la distance **d** ou **r** que vous souhaitez utiliser. Pour plus d’indications, consultez la partie 2 à propos des topologies. 
+3.  Choisissez la topologie à appliquer (**2D maillée, 2D hexagonale, 3D maillée**) et spécifiez la distance **d** ou **r** que vous souhaitez utiliser.  
 
 5.	Enregistrez le fichier de contrainte normalisé ou simplifié au format texte **.txt** ou format. **xdc** en cliquant sur « **Generate constraint file** » ou « **Generate constraint file (simplified)** ».
 
@@ -76,7 +78,7 @@ Dans la section « **Surface** », il est possible calculer la distance entre le
 
 1.	Spécifiez la surface à partir de laquelle vous voulez calculer une distance.
 
-2.  Remplissez les caractéristiques du premier bloc de la topologie en utilisant la section en spécifiant le nombre de routeur en X (**dimX**), le nombre de routeur en Y (**dimY**) et les **coordonnées** du bloc1. Pour plus d’indications, consultez la partie 3.1 à propos des coordonnées des blocs.
+2.  Remplissez les caractéristiques du premier bloc de la topologie en utilisant la section en spécifiant le nombre de routeur en X (**dimX**), le nombre de routeur en Y (**dimY**) et les **coordonnées** du bloc1.
 
 3.  Appuyez sur le bouton **« Get Distance** » pour voir affichez le résultat, respectif à chaque topologie.
 
@@ -92,7 +94,7 @@ Les fichiers de contrainte (normalisés ou simplifiés) sont générés dans le 
 | 2D hexagonale | cstr_file_hexa_generated.txt  | cstr_file_hexa_simplified_generated.txt |
 | 3D maillée    | cstr_file_3D_generated.txt    | cstr_file_3D_simplified_generated.txt   |
 
-### Logs
+### Log
 
 Le logiciel possède une partie log permettant de vous informer sur les différentes opérations effectuées.
 
