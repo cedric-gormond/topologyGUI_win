@@ -1,168 +1,115 @@
-# Project Title
+# topology-GUI pour Windows
 
-One Paragraph of project description goes here
+## Pour commencer
 
-## Getting Started
+Créer et/ou modifier des fichiers de contraintes d'architecture NoC pour le logiciel Xilinx Vivado. Ces fichiers de contraintes contiennent l'emplacement de routeurs (blocs) correspondant à une certaine topologie, que l'on veut modifier. Ce programme a été créé pour le **Laboratoire Hubert Curien (CNRS)**.
 
-These instructions will get you a copy of the project up and running on your local machine for development and testing purposes. See deployment for notes on how to deploy the project on a live system.
+### Installation
 
-### Prerequisites
+Vous devez extraire le contenu de l'archive dans un expace de travail. Pour utiliser le programme, vous devez lancer l'éxecutable contenue dans le dossier extracté.
 
-What things you need to install the software and how to install them
+## Utiliser le programme
 
-```
-Give examples
-```
+### Comment importer un fichier de contrainte ?
 
-### Installing
+Il faut premièrement modifier l’extension du fichier de contrainte au format .**txt** (le logiciel n'arrive pas encore à reconnaître le format. xdc). Ensuite, pour importer un fichier, il faut que celui-ci soit présent dans le répertoire `io` dans répertoire contenant l’exécutable. **Attention, le fichier de contrainte doit avoir le nom suivant : cstr_file.txt**
 
-A step by step series of examples that tell you have to get a development env running
 
-Say what the step will be
+### Les fichiers de contrainte simplifiés
 
-```
-Give the example
-```
+TopologyGUI permet la génération de fichiers simplifiés. Ces fichiers simplifiés contiennent uniquement les informations essentielles d’un fichier classique (position d’un bloc avec ses coordonnées) et sont donc plus lisibles. Cependant, **ces fichiers simplifiés ne sont pas pris en compte par le logiciel Xilinx Vivado**.
 
-And repeat
+#### Le fichier simplifié original
+- Cliquez sur « **Generate simplified constraint file»** pour générer un fichier de contrainte simplifié du fichier original, sans aucune modification. 
 
-```
-until finished
-```
+#### Le fichier simplifié
+- Cliquez sur « **Generate constraint file (simplified)»** pour générer un fichier de contrainte simplifié suivant les caractéristiques sélectionnées auparavant (topologie). 
 
-End with an example of getting some data out of the system or using it for a little demo
+### Comment modifier d’un fichier de contrainte ?
+Il est possible de modifier les caractéristiques d’un fichier de contrainte en appliquant une certaine topologie plus homogène à celui-ci en utilisant la section « **Topology**».
 
-## Running the tests
+1. Vérifier que la case « **Disable** » de la section **«** **Create constraint file from scratch** » est bien coché.
 
-Explain how to run the automated tests for this system
 
-### Break down into end to end tests
+2. Optionnel : Il est possible de redimensionner le premier bloc (et ainsi **tous les autres blocs**) du fichier de contrainte importé dans la section « **Dimensions** ». Saisissez la hauteur et la largeur du premier bloc.
 
-Explain what these tests test and why
+   Vous avez bien sûr la possibilité d’effectuer aucune modification en sélectionnant l’option « **Default** » de la section « **Dimensions** ». Les dimensions du premier bloc sont affichées.
 
-```
-Give an example
-```
+3. Choisissez la topologie que vous voulez appliquer au fichier de contrainte initial en saisissant la distance **d** ou **r**. Pour rappel, la distance **d** est la distance entre le centre de chaque bloc et la distance **r** est la diagonale entre les blocs hexagonaux. Pour plus d’indications, consultez la partie 3 à propos des topologies. 
 
-### And coding style tests
+4. Enregistrez le fichier de contrainte normalisé ou simplifié au format texte **.txt** ou format. **xdc** en cliquant sur « **Generate constraint file** » ou « **Generate constraint file (simplified)** ». Le fichier original ne sera pas modifié.   
 
-Explain what these tests test and why
 
-```
-Give an example
-```
+### Comment créer un fichier de contrainte ?
 
-## Deployment
+Il est possible de créer un fichier de contrainte (en ignorant le fichier de contrainte importé) en utilisant la section « **Create constraint file from scratch** ».  
 
-Add additional notes about how to deploy this on a live system
+#### Création de topologies 2D et 3D 
 
-## Built With
+1. Décochez la case « **Disable** ». En décochant cette case, le fichier de contrainte initial sera ignoré.
 
-* [Dropwizard](http://www.dropwizard.io/1.0.2/docs/) - The web framework used
-* [Maven](https://maven.apache.org/) - Dependency Management
-* [ROME](https://rometools.github.io/rome/) - Used to generate RSS Feeds
+2.	Remplissez les caractéristiques du fichier de contrainte de sortie en spécifiant le nombre de routeur en X (**dimX**), le nombre de routeur en Y (**dimY**) et les **coordonnées** du bloc1. Pour plus d’indications, consultez la partie 2.1 à propos des coordonnées des blocs.
 
-## Contributing
+3.  Choisissez la topologie à appliquer (**2D maillée, 2D hexagonale, 3D maillée**) et spécifiez la distance **d** ou **r** que vous souhaitez utiliser. Pour plus d’indications, consultez la partie 2 à propos des topologies. 
 
-Please read [CONTRIBUTING.md](https://gist.github.com/PurpleBooth/b24679402957c63ec426) for details on our code of conduct, and the process for submitting pull requests to us.
+5.	Enregistrez le fichier de contrainte normalisé ou simplifié au format texte **.txt** ou format. **xdc** en cliquant sur « **Generate constraint file** » ou « **Generate constraint file (simplified)** ».
 
-## Versioning
+#### Remarques à propos de la topologie 3D
 
-We use [SemVer](http://semver.org/) for versioning. For the versions available, see the [tags on this repository](https://github.com/your/project/tags). 
+La topologie 3D maillée ne possède qu’une seule dimension Z, c’est-à-dire que le paramètre **dimZ** est fixé à **1** et ne peut être changé.
 
-## Authors
+### Comment gérer les surfaces d’une topologie ?
 
-* **Billie Thompson** - *Initial work* - [PurpleBooth](https://github.com/PurpleBooth)
+Il est possible calculer la surface d’une topologie en utilisant la section « **Surface** ».  
 
-See also the list of [contributors](https://github.com/your/project/contributors) who participated in this project.
+#### Comment calculer la surface d’une topologie ?
 
-## License
+- Cliquez sur le bouton « **Generate constraint file** ». La surface calculée est basée sur paramètres des sections précédentes. Vous pouvez soit calculez la surface d’une topologie basée sur un fichier de contrainte importé ou soit calculez la surface d’une topologie crée par le logiciel en prenant soin de décocher la case « **Disable** ». Les surfaces s’affichent de la façon suivante :
 
-This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details
+#### Comment calculer la distance à partir d’une surface ?
 
-## Acknowledgments
+Dans la section « **Surface** », il est possible calculer la distance entre le centre de chaque bloc d’une topologie en spécifiant la surface de celle-ci. Pour pourvoir utiliser ce mode :
 
-* Hat tip to anyone who's code was used
-* Inspiration
-* etc
+1.	Spécifiez la surface à partir de laquelle vous voulez calculer une distance.
 
-# Project Title
+2.  Remplissez les caractéristiques du premier bloc de la topologie en utilisant la section en spécifiant le nombre de routeur en X (**dimX**), le nombre de routeur en Y (**dimY**) et les **coordonnées** du bloc1. Pour plus d’indications, consultez la partie 3.1 à propos des coordonnées des blocs.
 
-One Paragraph of project description goes here
+3.  Appuyez sur le bouton **« Get Distance** » pour voir affichez le résultat, respectif à chaque topologie.
 
-## Getting Started
+4.  Vous pouvez appliquer la distance **d** ou **r** calculée en sélectionnant la distance propre à la topologie souhaitée et en cliquant sur « **Apply selected distance** ». Le résultat apparaitra ainsi dans la section « **Topology** ».
 
-These instructions will get you a copy of the project up and running on your local machine for development and testing purposes. See deployment for notes on how to deploy the project on a live system.
+### Comment récupérer un fichier de contrainte généré ?
 
-### Prerequisites
+Les fichiers de contrainte (normalisés ou simplifiés) sont générés dans le dossier `io` du projet au format imposé. Les fichiers générés respectent les appellations suivantes :
 
-What things you need to install the software and how to install them
+| **Topologie** | **Fichier généré (output) :** | **Fichier simplifié généré (output)**   |
+| ------------- | ----------------------------- | --------------------------------------- |
+| 2D maillée    | cstr_file_2D_generated.txt    | cstr_file_2D_simplified_generated.txt   |
+| 2D hexagonale | cstr_file_hexa_generated.txt  | cstr_file_hexa_simplified_generated.txt |
+| 3D maillée    | cstr_file_3D_generated.txt    | cstr_file_3D_simplified_generated.txt   |
 
-```
-Give examples
-```
+### Logs
 
-### Installing
+Le logiciel possède une partie log permettant de vous informer sur les différentes opérations effectuées.
 
-A step by step series of examples that tell you have to get a development env running
+### Bugs
 
-Say what the step will be
+Il se peut que le programme possède des bugs ou des erreurs mémoires. S’il-vous-plaît, envoyez un mail à l’adresse suivante ou de proposer une issue sur **Github** afin de les corriger : [cedric.gormond@gmail.com](mailto:cedric.gormond@gmail.com) 
 
-```
-Give the example
-```
+## Développé avec
 
-And repeat
+* [SFML](https://www.sfml-dev.org/community.php)  : Framework open-source permettant de rendus graphiques *(licence ‘as-is’).*
 
-```
-until finished
-```
+* [ImGui](https://github.com/ocornut/imgui) : Librairie graphique open-source permettant l’utilisation d’un GUI *(licence MIT*)
 
-End with an example of getting some data out of the system or using it for a little demo
+* [ImGui-SFML](https://github.com/eliasdaler/imgui-sfml)  : Librairie permettant l’intégration de la bibliothèque ImGui au Framework SFML *(licence MIT)*
 
-## Running the tests
+IDE : 
+* Clion Mac & PC
 
-Explain how to run the automated tests for this system
+## Auteur
 
-### Break down into end to end tests
-
-Explain what these tests test and why
-
-```
-Give an example
-```
-
-### And coding style tests
-
-Explain what these tests test and why
-
-```
-Give an example
-```
-
-## Deployment
-
-Add additional notes about how to deploy this on a live system
-
-## Built With
-
-* [Dropwizard](http://www.dropwizard.io/1.0.2/docs/) - The web framework used
-* [Maven](https://maven.apache.org/) - Dependency Management
-* [ROME](https://rometools.github.io/rome/) - Used to generate RSS Feeds
-
-## Contributing
-
-Please read [CONTRIBUTING.md](https://gist.github.com/PurpleBooth/b24679402957c63ec426) for details on our code of conduct, and the process for submitting pull requests to us.
-
-## Versioning
-
-We use [SemVer](http://semver.org/) for versioning. For the versions available, see the [tags on this repository](https://github.com/your/project/tags). 
-
-## Authors
-
-* **Billie Thompson** - *Initial work* - [PurpleBooth](https://github.com/PurpleBooth)
-
-See also the list of [contributors](https://github.com/your/project/contributors) who participated in this project.
+* **Cédric Gormond** - *Etudiant à Télécom Saint-Etienne*
 
 ## License
 
